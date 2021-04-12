@@ -2,7 +2,7 @@
 from flask import Flask,render_template, jsonify, request
 import random
 import json
-import business
+import airport
 
 
 app  = Flask(__name__)
@@ -26,7 +26,7 @@ http://0.0.0.0:7000/api/data
 @app.route("/api/data", methods=["GET"])
 def api_get_data():
 
-    result = business.get_data()
+    result = airport.get_data()
 
     # result_dict = {
 
@@ -56,7 +56,7 @@ def api_add_data():
         
 
     }
-    result_data = business.add_row(country, count)
+    result_data = airport.add_row(country, count)
 
     return jsonify(result)
 
