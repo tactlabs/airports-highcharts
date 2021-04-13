@@ -8,7 +8,7 @@ WORKDIR $HOME/tact_charts
 
 ADD requirements.txt $HOME/tact_charts/
 
-ADD app.py $HOME/tact_charts/
+ADD . $HOME/tact_charts/
 
 RUN pip install -r requirements.txt
 
